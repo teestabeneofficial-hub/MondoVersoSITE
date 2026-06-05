@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termini di Servizio — MondoVerso</title>
+  <meta name="description" content="Termini e condizioni d'uso del metamotore di ricerca viaggi MondoVerso." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand:{50:'#FFF2E8',500:'#FF6600',600:'#E25400'}, ink:'#14202A', slatey:'#5B6B74', cream:'#FBF7F1', sand:'#F1E9DC' },
+      fontFamily: { display:['Fraunces','serif'], sans:['"Plus Jakarta Sans"','system-ui','sans-serif'] }
+    }}}
+  </script>
+  <style>body{background:#FBF7F1}.bar-brand{background:linear-gradient(90deg,#FF6600,#38B6FF 55%,#7ED956)}</style>
+</head>
+<body class="font-sans text-ink antialiased">
+  <header>
+    <div class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5"><img src="/logo-mondoverso.png" alt="MondoVerso" class="h-12 w-auto" /></a>
+      <a href="/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">← Home</a>
+    </div>
+    <div class="bar-brand h-[3px]"></div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-10">
+    <h1 class="font-display text-4xl font-semibold mb-2">Termini di Servizio</h1>
+    <p class="text-slatey text-sm mb-8">Ultimo aggiornamento: [DATA] · Template da far revisionare a un legale prima della pubblicazione.</p>
+
+    <section class="space-y-6 text-[15px] leading-relaxed text-ink/90">
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">1. Natura del servizio</h2>
+        <p>MondoVerso è un <strong>metamotore di ricerca</strong>: confronta e mostra offerte di voli e hotel fornite da terze parti. Non vendiamo direttamente voli o soggiorni; la prenotazione e il contratto di acquisto avvengono sui siti dei partner.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">2. Prezzi e disponibilità</h2>
+        <p>I prezzi mostrati sono indicativi e possono variare al momento della prenotazione sul sito del partner. Non garantiamo la disponibilità né l'accuratezza in tempo reale di ogni offerta.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">3. Link di affiliazione</h2>
+        <p>Alcuni link sono affiliati: se prenoti tramite essi, MondoVerso può ricevere una commissione dal partner, senza costi aggiuntivi per te. Questo non influenza il prezzo che paghi.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">4. Account utente</h2>
+        <p>Sei responsabile della riservatezza delle tue credenziali e delle attività svolte tramite il tuo account. Ti impegni a fornire informazioni veritiere.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">5. Limitazione di responsabilità</h2>
+        <p>Nei limiti di legge, MondoVerso non è responsabile per disservizi, cancellazioni o controversie relative ai servizi acquistati presso i partner. Per tali questioni occorre rivolgersi direttamente al fornitore.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">6. Legge applicabile</h2>
+        <p>I presenti termini sono regolati dalla legge italiana. Per ogni controversia è competente il foro di [CITTÀ], salvo diversa norma inderogabile a tutela del consumatore.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-10"><div class="bar-brand h-[3px]"></div>
+    <div class="max-w-3xl mx-auto px-6 py-6 text-sm text-slatey flex flex-wrap gap-4 justify-between">
+      <span>© <span id="anno"></span> MondoVerso</span>
+      <span class="flex gap-4"><a href="/privacy.html" class="hover:text-ink">Privacy</a><a href="/cookie.html" class="hover:text-ink">Cookie</a><a href="/termini.html" class="hover:text-ink">Termini</a><a href="/contatti.html" class="hover:text-ink">Contatti</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('anno').textContent=new Date().getFullYear()</script>
+</body>
+</html>

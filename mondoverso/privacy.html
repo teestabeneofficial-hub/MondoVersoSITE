@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — MondoVerso</title>
+  <meta name="description" content="Informativa sulla privacy di MondoVerso: quali dati raccogliamo e come li trattiamo." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand:{50:'#FFF2E8',500:'#FF6600',600:'#E25400'}, ink:'#14202A', slatey:'#5B6B74', grigio:'#6B6B6B', cream:'#FBF7F1', sand:'#F1E9DC' },
+      fontFamily: { display:['Fraunces','serif'], sans:['"Plus Jakarta Sans"','system-ui','sans-serif'] }
+    }}}
+  </script>
+  <style>body{background:#FBF7F1}.bar-brand{background:linear-gradient(90deg,#FF6600,#38B6FF 55%,#7ED956)}</style>
+</head>
+<body class="font-sans text-ink antialiased">
+  <header>
+    <div class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5"><img src="/logo-mondoverso.png" alt="MondoVerso" class="h-12 w-auto" /></a>
+      <a href="/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">← Home</a>
+    </div>
+    <div class="bar-brand h-[3px]"></div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-10 prose-custom">
+    <h1 class="font-display text-4xl font-semibold mb-2">Informativa sulla Privacy</h1>
+    <p class="text-slatey text-sm mb-8">Ultimo aggiornamento: [DATA] · Documento template da far revisionare a un consulente legale prima della pubblicazione.</p>
+
+    <section class="space-y-6 text-[15px] leading-relaxed text-ink/90">
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">1. Titolare del trattamento</h2>
+        <p>Il titolare del trattamento dei dati è <strong>[RAGIONE SOCIALE]</strong>, con sede in [INDIRIZZO], P.IVA [PARTITA IVA]. Per qualsiasi richiesta puoi scrivere a <strong>andrea.lampitto@borsaviaggi.net</strong>.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">2. Dati che raccogliamo</h2>
+        <p>Raccogliamo i dati che ci fornisci direttamente (es. email e nome in fase di registrazione), i dati di utilizzo del servizio (ricerche effettuate, città di partenza) e dati tecnici (indirizzo IP, tipo di browser, dispositivo) tramite cookie e tecnologie simili.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">3. Finalità e basi giuridiche</h2>
+        <p>Trattiamo i dati per: erogare il servizio di ricerca viaggi (esecuzione del contratto), inviarti avvisi prezzo se richiesti (consenso), migliorare il servizio e garantire la sicurezza (legittimo interesse), e adempiere a obblighi di legge.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">4. Servizi di terze parti</h2>
+        <p>Utilizziamo fornitori terzi per erogare il servizio, tra cui Travelpayouts e i suoi partner di prenotazione (per i risultati di voli e hotel), provider di autenticazione (es. Google), servizi di hosting (Vercel) ed eventuali strumenti di analisi. Questi soggetti trattano i dati secondo le rispettive informative.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">5. Conservazione dei dati</h2>
+        <p>Conserviamo i dati per il tempo necessario alle finalità indicate e secondo i termini di legge. I dati dell'account vengono cancellati su richiesta o dopo un periodo di inattività prolungato.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">6. I tuoi diritti</h2>
+        <p>Hai diritto di accedere, rettificare, cancellare e limitare il trattamento dei tuoi dati, oltre alla portabilità e all'opposizione. Puoi esercitarli scrivendo a andrea.lampitto@borsaviaggi.net. Hai inoltre il diritto di reclamo al Garante per la protezione dei dati personali.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">7. Cookie</h2>
+        <p>L'uso dei cookie è descritto nella <a href="/cookie.html" class="text-brand-600 font-semibold">Cookie Policy</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-10"><div class="bar-brand h-[3px]"></div>
+    <div class="max-w-3xl mx-auto px-6 py-6 text-sm text-slatey flex flex-wrap gap-4 justify-between">
+      <span>© <span id="anno"></span> MondoVerso</span>
+      <span class="flex gap-4"><a href="/privacy.html" class="hover:text-ink">Privacy</a><a href="/cookie.html" class="hover:text-ink">Cookie</a><a href="/termini.html" class="hover:text-ink">Termini</a><a href="/contatti.html" class="hover:text-ink">Contatti</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('anno').textContent=new Date().getFullYear()</script>
+</body>
+</html>
