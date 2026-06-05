@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy — MondoVerso</title>
+  <meta name="description" content="Cookie Policy di MondoVerso: quali cookie usiamo e come gestire il consenso." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand:{50:'#FFF2E8',500:'#FF6600',600:'#E25400'}, ink:'#14202A', slatey:'#5B6B74', cream:'#FBF7F1', sand:'#F1E9DC' },
+      fontFamily: { display:['Fraunces','serif'], sans:['"Plus Jakarta Sans"','system-ui','sans-serif'] }
+    }}}
+  </script>
+  <style>body{background:#FBF7F1}.bar-brand{background:linear-gradient(90deg,#FF6600,#38B6FF 55%,#7ED956)}</style>
+</head>
+<body class="font-sans text-ink antialiased">
+  <header>
+    <div class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5"><img src="/logo-mondoverso.png" alt="MondoVerso" class="h-12 w-auto" /></a>
+      <a href="/" class="text-sm font-semibold text-brand-600 hover:text-brand-700">← Home</a>
+    </div>
+    <div class="bar-brand h-[3px]"></div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-10">
+    <h1 class="font-display text-4xl font-semibold mb-2">Cookie Policy</h1>
+    <p class="text-slatey text-sm mb-8">Ultimo aggiornamento: [DATA] · Template da revisionare prima della pubblicazione.</p>
+
+    <section class="space-y-6 text-[15px] leading-relaxed text-ink/90">
+      <p>I cookie sono piccoli file salvati sul tuo dispositivo. Usiamo le seguenti categorie:</p>
+
+      <div class="bg-white rounded-2xl border border-sand p-5">
+        <h2 class="font-display text-xl font-semibold mb-1">Cookie tecnici (necessari)</h2>
+        <p class="text-sm">Indispensabili per il funzionamento del sito (es. mantenere la sessione di accesso, ricordare il consenso ai cookie). Non richiedono consenso.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-sand p-5">
+        <h2 class="font-display text-xl font-semibold mb-1">Cookie analitici</h2>
+        <p class="text-sm">Ci aiutano a capire come viene usato il sito in forma aggregata. Vengono attivati solo dopo il tuo consenso.</p>
+      </div>
+      <div class="bg-white rounded-2xl border border-sand p-5">
+        <h2 class="font-display text-xl font-semibold mb-1">Cookie di terze parti / marketing</h2>
+        <p class="text-sm">I partner di prenotazione (es. tramite i link affiliati Travelpayouts) possono impostare cookie per attribuire le prenotazioni. Vengono attivati solo dopo il tuo consenso.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl font-semibold mb-2">Gestione del consenso</h2>
+        <p>Puoi modificare le tue preferenze in qualsiasi momento dal banner dei cookie. Per revocare il consenso, cancella i cookie dalle impostazioni del browser o usa il pulsante qui sotto.</p>
+        <button onclick="try{localStorage.removeItem('mv_cookie_consent')}catch(e){}; alert('Preferenze cookie azzerate. Ricarica la home per rivedere il banner.');" class="mt-4 px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm">Reimposta preferenze cookie</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-10"><div class="bar-brand h-[3px]"></div>
+    <div class="max-w-3xl mx-auto px-6 py-6 text-sm text-slatey flex flex-wrap gap-4 justify-between">
+      <span>© <span id="anno"></span> MondoVerso</span>
+      <span class="flex gap-4"><a href="/privacy.html" class="hover:text-ink">Privacy</a><a href="/cookie.html" class="hover:text-ink">Cookie</a><a href="/termini.html" class="hover:text-ink">Termini</a><a href="/contatti.html" class="hover:text-ink">Contatti</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById('anno').textContent=new Date().getFullYear()</script>
+</body>
+</html>
