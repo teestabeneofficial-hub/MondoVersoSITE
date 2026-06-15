@@ -1458,8 +1458,8 @@
       mostraStatoRisultati('lista');
       renderRisultati();
     }
-    // In sottofondo: prezzi hotel reali (LiteAPI) → aggiornano le card
-    caricaPrezziHotel();
+    // Nota: i prezzi hotel reali torneranno quando avremo la chiave LiteAPI di
+    // PRODUZIONE e la prenotazione on-site (prezzo = quello che si paga davvero).
   }
 
   // Recupera da LiteAPI la tariffa hotel più economica per ogni risultato
@@ -1630,7 +1630,7 @@
       +             '<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M3 21h18M9 21v-6h6v6"/></svg>'
       +           '</span>'
       +           '<div class="min-w-0"><p class="text-sm font-semibold text-ink truncate">Hotel a ' + p.citta + '</p>'
-      +           '<p class="text-xs text-slatey">' + (p.prezzoHotelReale ? 'da ' + p.prezzoHotelReale + '€ · 2 notti' : 'al miglior prezzo, già pronto') + '</p></div>'
+      +           '<p class="text-xs text-slatey">prezzi reali sul sito hotel →</p></div>'
       +         '</div>'
       +         '<a href="' + costruisciLinkStay22(p.citta, p.paese) + '" target="_blank" rel="noopener" onclick="event.stopPropagation()" '
       +            'class="shrink-0 inline-flex items-center gap-1 text-sm font-bold text-ocean-600 hover:text-ocean-700 whitespace-nowrap">Vedi hotel →</a>'
@@ -1800,9 +1800,7 @@
     let inDate = stato.date.andata, outDate = stato.date.ritorno;
     if (!inDate || !outDate){ const w = calcolaWeekend('this'); inDate = formattaISO(w.andata); outDate = formattaISO(w.ritorno); }
     const url = costruisciLinkStay22(citta, paese);
-    const prezzoTxt = p.prezzoHotelReale
-      ? '<p class="text-2xl font-display font-semibold text-ink mb-1">da ' + p.prezzoHotelReale + '€ <span class="text-sm font-normal text-slatey">· 2 notti</span></p>'
-      : '';
+    const prezzoTxt = '';
 
     cont.innerHTML =
       '<div class="rounded-xl bg-cream border border-sand p-5">'
@@ -2198,7 +2196,7 @@
       if (!mappaIstanza){
         mappaIstanza = L.map(cont, { scrollWheelZoom: false, worldCopyJump: true, attributionControl: false, minZoom: 1 })
                          .setView([34, 8], 2);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(mappaIstanza);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { maxZoom: 18 }).addTo(mappaIstanza);
         mappaMarkers = L.layerGroup().addTo(mappaIstanza);
       }
 
