@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sostituisci con il tuo dominio reale
+Sitemap: https://www.mondoverso.com/sitemap.xml
