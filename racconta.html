@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#FF6600">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/mv.css">
+<title>Racconta il tuo weekend | MondoVERSO</title>
+<meta name="description" content="Racconta il tuo weekend: quanto hai speso, cosa rifaresti, le foto più belle. Aiuti chi parte dopo di te.">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+</head>
+<body data-page="racconta">
+<div data-mv-top></div>
+<main class="section"><div class="wrap" style="max-width:860px">
+  <h1 style="font-size:clamp(36px,5vw,56px)">Racconta il tuo weekend</h1>
+  <p class="lead" style="margin-top:14px">Quanto hai speso davvero, cosa rifaresti, cosa eviteresti. Il tuo racconto compare sulla pagina della città dopo un nostro controllo, di solito entro un giorno.</p>
+  <div style="margin-top:26px"><div class="panel" id="loginBox"><h2 style="font-size:26px">Entra o crea il tuo profilo</h2><p class="small" style="margin-top:8px">Con la password, oppure con un link che ti mandiamo per email.</p><form class="form" id="loginForm" novalidate><div class="form-grid"><label>Email<input type="email" name="email" required autocomplete="email"></label><label>Password<input type="password" name="password" autocomplete="current-password" placeholder="vuota per il link via email"></label></div><div style="display:flex;flex-wrap:wrap;gap:10px"><button class="btn btn-ink" type="submit" data-mode="login">Entra</button><button class="btn btn-line" type="submit" data-mode="signup">Crea il profilo</button><button class="btn btn-line" type="submit" data-mode="link">Mandami il link</button></div><p class="form-msg" id="loginMsg" role="status" aria-live="polite"></p></form></div></div>
+  <form class="panel form" id="tellForm" hidden novalidate style="margin-top:26px">
+    <p class="small">Sei entrato come <b id="tWho"></b>.</p>
+    <div class="form-grid">
+      <label>Il tuo nome come vuoi che compaia<input type="text" name="autore" required placeholder="es. Giulia, 26 anni"></label>
+      <label>Città<select id="tCity"></select></label>
+      <label class="full" id="tOtherWrap" hidden>Quale città<input type="text" name="altra"></label>
+      <label class="full">Titolo<input type="text" name="titolo" required maxlength="90" placeholder="es. Lisbona in 48 ore con 190 euro"></label>
+      <label class="full">Il racconto<textarea name="testo" required maxlength="3000" placeholder="Com'è andata? Cosa ti è piaciuto di più? Cosa non rifaresti?"></textarea></label>
+      <label>Quanto hai speso in tutto, a persona (€)<input type="number" name="speso" min="0" step="1"></label>
+      <label>Quando ci sei stato<input type="text" name="quando" placeholder="es. ottobre 2026"></label>
+      <label class="full">Il tuo consiglio per chi parte<input type="text" name="consigli" maxlength="200" placeholder="es. prendi la metro dall'aeroporto, costa 2 euro"></label>
+      <label class="full">Foto (fino a 6)<input type="file" id="tPhotos" accept="image/*" multiple></label>
+      <label class="check full"><input type="checkbox" name="regole" value="1"><span>Le foto le ho fatte io e chi compare mi ha dato il permesso. Accetto le <a href="/termini">regole dei racconti</a>.</span></label>
+    </div>
+    <div><button class="btn btn-orange" type="submit" id="tellSend">Invia il racconto</button></div>
+    <p class="form-msg" id="tellMsg" role="status" aria-live="polite"></p>
+  </form>
+</div></main>
+<div data-mv-foot></div>
+<script src="/assets/mv.js"></script>
+</body>
+</html>

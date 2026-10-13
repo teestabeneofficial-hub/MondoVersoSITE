@@ -1,0 +1,23 @@
+{
+  "name": "MondoVerso — Weekend last-minute",
+  "short_name": "MondoVerso",
+  "description": "Weekend con volo diretto, hotel in centro e tasse in un solo prezzo: parti venerdì dopo il lavoro, torni domenica sera.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FF6600",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
